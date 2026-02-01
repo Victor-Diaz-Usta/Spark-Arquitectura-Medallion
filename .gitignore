@@ -3,8 +3,10 @@
 **/*-checkpoint.py
 
 # Jupyter Trash (en notebooks)
-notebooks/.Trash-0/
-notebooks/.Trash-0/**
+**/.Trash-0/
+**/.Trash-0/**
 
 # General trash
 .Trash-0/
+
+notebooks/spark-warehouse/
