@@ -27,8 +27,9 @@ services:
       - ./data:/app/data
     environment:
       - SPARK_WORKER_CORES=2
-      - SPARK_WORKER_MEMORY=2G
+      - SPARK_WORKER_MEMORY=3G
       - SPARK_NO_DAEMONIZE=true
+    
 
   # --- NODO 3: JUPYTER LAB ---
   jupyter-lab:
