@@ -1,7 +1,10 @@
-# Jupyter / IPython
-.ipynb_checkpoints/
-*-checkpoint.py
+# Jupyter checkpoints (en cualquier nivel)
+**/.ipynb_checkpoints/
+**/*-checkpoint.py
 
-# Jupyter Trash
+# Jupyter Trash (en notebooks)
+notebooks/.Trash-0/
+notebooks/.Trash-0/**
+
+# General trash
 .Trash-0/
-Trash-0/
