@@ -1,2 +1,7 @@
+# Jupyter / IPython
 .ipynb_checkpoints/
 *-checkpoint.py
+
+# Jupyter Trash
+.Trash-0/
+Trash-0/
