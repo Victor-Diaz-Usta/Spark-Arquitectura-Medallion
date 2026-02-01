@@ -38,8 +38,10 @@ services:
     ports:
       - "8888:8888" # Acceso al notebook
       - "4040:4040" # Monitor de Jobs
+      - "1010:1010" # Spark Thift Server para DBT
     volumes:
       - ./data:/app/data
       - ./notebooks:/app/notebooks
+      - ./dbt_project:/app/dbt_project
     environment:
       - SPARK_MASTER_URL=spark://spark-master:7077

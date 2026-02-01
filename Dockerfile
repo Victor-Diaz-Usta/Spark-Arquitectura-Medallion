@@ -5,6 +5,7 @@ FROM python:3.11-slim
 # Spark corre sobre la JVM (Scala). PySpark necesita Java para funcionar.
 RUN apt-get update && \
     apt-get install -y default-jdk procps curl && \
+    apt-get install -y python3-dev libsasl2-dev libsasl2-modules gcc g++ && \
     apt-get clean
 
 # 3. Configurar Variables de Entorno
@@ -23,7 +24,7 @@ RUN curl -O https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-$
 # 5. Instalar librerías de Python
 # delta-spark: Permite usar el formato Delta Lake
 # jupyterlab: Nuestro entorno de desarrollo (Driver)
-RUN pip install pyspark==${SPARK_VERSION} delta-spark==3.0.0 pandas jupyterlab
+RUN pip install pyspark==${SPARK_VERSION} delta-spark==3.0.0 pandas jupyterlab "dbt-spark[PyHive]"
 
 WORKDIR /app
 
